@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
+  {{#if user}}
+  <a href="/">Home</a>
+  <a href="/auth/private">MyPage</a>
+  <a href="/logout">Logout</a>
+  {{else}}
+  <a href="/">Home</a>
+  <a href="/auth/signup">Signup</a>
+  <a href="/auth/login">Login</a>
+  {{/if}}
 
   {{{body}}}
 

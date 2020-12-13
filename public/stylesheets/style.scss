@@ -1,8 +1,24 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  margin : 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
-a {
-  color: #00B7FF;
+a{
+  text-decoration: none;
+  color : #333;
+  transition: all 1.1s;
+}
+
+a:hover{
+  font-size: 22px;
+}
+
+.fotos{
+  width:90%;
+  margin:20px auto;
+}
+
+.foto img{
+  width: 100%;
 }

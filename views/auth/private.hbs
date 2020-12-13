@@ -1,0 +1,11 @@
+<h2>Welcome {{username}}</h2>
+
+<form action="/auth/private" method="POST" enctype="multipart/form-data">
+<label for="img">Foto of your ootd</label>
+<input type="file" name="img">
+<br>
+<label for="comment">Comment about your ootd</label>
+<input type="text" name="comment">
+<br>
+<button type="submit">Upload!</button>
+</form>

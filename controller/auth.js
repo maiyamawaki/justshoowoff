@@ -45,8 +45,9 @@ exports.logoutView = (req, res)=>{
 }
 
 /*private view*/
-exports.privateView = (req,res)=>{
-	res.render("auth/private", req.user);
+exports.privateView = async(req,res)=>{
+	const user = await User.findById(req.user.id);
+	res.render("auth/private", user);
 }
 
 

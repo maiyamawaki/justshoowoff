@@ -6,17 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-  {{#if user}}
-  <a href="/">Home</a>
-  <a href="/auth/private">MyPage</a>
-  <a href="/logout">Logout</a>
-  {{else}}
-  <a href="/">Home</a>
-  <a href="/auth/signup">Signup</a>
-  <a href="/auth/login">Login</a>
-  {{/if}}
+  <div class="links">
+    <div class="title">
+      <a href="/">Ootd</a>
+    </div>
+    <div class="link">
+      {{#if user}}
+      <a href="/">Home</a>
+      <a href="/auth/private">MyPage</a>
+      <a href="/logout">Logout</a>
+      {{else}}
+      <a href="/">Home</a>
+      <a href="/auth/signup">Signup</a>
+      <a href="/auth/login">Login</a>
+      {{/if}}
+    </div>
+  </div>
 
   {{{body}}}
 

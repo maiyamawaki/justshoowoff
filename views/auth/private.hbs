@@ -1,11 +1,22 @@
-<h2>Welcome {{username}}</h2>
+<div class="main">
+	<h2>Welcome {{username}}</h2>
 
-<form action="/auth/private" method="POST" enctype="multipart/form-data">
-<label for="img">Foto of your ootd</label>
-<input type="file" name="img">
-<br>
-<label for="comment">Comment about your ootd</label>
-<input type="text" name="comment">
-<br>
-<button type="submit">Upload!</button>
-</form>
+	<form action="/auth/private" method="POST" enctype="multipart/form-data">
+	<label for="img">Foto of your ootd</label>
+	<input type="file" name="img">
+	<br>
+	<label for="comment">Comment about your ootd</label>
+	<input type="text" name="comment">
+	<br>
+	<button type="submit">Upload!</button>
+
+	<div class="fotos">
+		{{#each fotos}}
+			<div class="foto">
+				<img src="{{img}}" alt="">
+				<a href="/auth/delete/{{_id}}">Delete</a>
+			</div>
+		{{/each}}
+	</div>
+	</form>
+</div>

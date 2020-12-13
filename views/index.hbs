@@ -1,15 +1,12 @@
 <div class="main">
-	<h1>Yamai</h1>
+	<h1>Ootd</h1>
 	<p>This is an app just so people can share their ootd.</p>
 
 	<div class="fotos">
 		{{#each fotos}}
 			<div class="foto">
 				<img src="{{img}}" alt="">
-				<ul>
-					<li>{{comment}}</li>
-				</ul>
-				<p>{{owner}}</p>
+				<p>name : {{owner}}</p>
 				<a href="/user/detail/{{ownerId}}">Detail</a>
 			</div>
 		{{/each}}

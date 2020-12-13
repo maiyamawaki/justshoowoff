@@ -49,7 +49,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'about yamai';
+app.locals.title = 'ootd';
 
 const index = require('./routes/index');
 app.use('/', index);
@@ -57,5 +57,7 @@ const auth = require("./routes/auth");
 app.use("/", auth);
 const userDetail = require("./routes/userDetail");
 app.use("/", userDetail);
+const fotoPost = require("./routes/fotoPost");
+app.use("/", fotoPost);
 
 module.exports = app;

@@ -1,6 +1,11 @@
-<h1>{{username}}</h1>
-{{#each fotos}}
-<div class="foto">
-	<img src="{{img}}" alt="">
+<div class="main">
+	<h1>{{username}}</h1>
+	<div class="fotos">
+		{{#each fotos}}
+		<div class="foto">
+			<img src="{{img}}" alt="">
+			<p>{{comment}}</p>
+		</div>
+		{{/each}}
+	</div>
 </div>
-{{/each}}

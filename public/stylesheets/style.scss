@@ -14,6 +14,10 @@ a:hover{
   font-size: 22px;
 }
 
+.message{
+  color:tomato;
+}
+
 /*links*/
 .links{
   background-color: #333;
@@ -78,4 +82,16 @@ a:hover{
 
 .foto a:hover{
   font-size:20px;
+}
+
+/*delete confirm page*/
+.confirm{
+  width: 80%;
+  margin : 10px auto;
+}
+
+.deletefoto img{
+  width: 60%;
+  display: block;
+  margin : 0 auto;
 }

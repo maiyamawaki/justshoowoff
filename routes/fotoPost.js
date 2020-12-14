@@ -9,6 +9,6 @@ const { postFotoProcess,
 router.post("/auth/private",upload.single("img"), postFotoProcess);
 /*delete foto*/
 router.get("/auth/delete/:fotoId", deleteFotoView);
-router.delete("/auth/delete/:fotoId", deleteFotoProcess)
+router.post("/auth/delete/:fotoId", deleteFotoProcess)
 
 module.exports = router;

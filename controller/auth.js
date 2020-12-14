@@ -10,6 +10,7 @@ exports.signupView = (req,res)=>{
 
 exports.signupProcess = async(req,res)=>{
 	const {username, email, password} = req.body;
+	const {path} = req.file;
 	if(username === "" || email === "" || password === ""){
 		return res.render("auth/signup", {message : "you are missing some data"})
 	}
@@ -22,6 +23,7 @@ exports.signupProcess = async(req,res)=>{
 	const newUser = await User.create({
 		username,
 		email,
+		photo : path,
 		password : hashPass,
 	})
 	console.log(newUser);

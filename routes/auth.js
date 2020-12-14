@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const upload = require("../config/cloudinary");
 const { signupView,
 				signupProcess,
 				loginView,
@@ -9,7 +10,7 @@ const { signupView,
 
 /*signup*/
 router.get("/auth/signup", signupView); 
-router.post("/auth/signup", signupProcess);
+router.post("/auth/signup", upload.single("photo"),signupProcess);
 /*login*/
 router.get("/auth/login", loginView);
 router.post("/auth/login", loginProcess);

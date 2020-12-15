@@ -1,15 +1,29 @@
 <div class="main">
-	<h2>Welcome {{username}}</h2>
-	<img src="{{photo}}" alt="">
+	<div class="acount-info">
+		<h2>Welcome {{username}}</h2>
+		<img src="{{photo}}" alt="">
+	</div>
 	<form action="/auth/private" method="POST" enctype="multipart/form-data">
-	<label for="img">Foto of your ootd</label>
-	<input type="file" name="img">
-	<br>
-	<label for="comment">Comment about your ootd</label>
-	<input type="text" name="comment">
-	<br>
-	<button type="submit">Upload!</button>
-
+		<label for="img">Photo : </label>
+		<input type="file" name="img">
+		<br>
+		<label for="tops">Tops or Outer : </label>
+		<input type="text" name="tops">
+		<br>
+		<label for="bottoms">Pants : </label>
+		<input type="text" name="bottoms">
+		<br>
+		<label for="shoses">Shoes : </label>
+		<input type="text" name="shoses">
+		<br>
+		<label for="acce">Accessories : </label>
+		<input type="text" name="acce">
+		<br>
+		<label for="comment">Comment : </label>
+		<input type="text" name="comment">
+		<br>
+		<button type="submit">Upload!</button>
+	</form>
 	<div class="fotos">
 		{{#each fotos}}
 			<div class="foto">
@@ -18,5 +32,4 @@
 			</div>
 		{{/each}}
 	</div>
-	</form>
 </div>

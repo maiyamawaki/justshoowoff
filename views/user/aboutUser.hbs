@@ -1,9 +1,10 @@
-<div class="mainIndex">
+<div class="main">
+	<h3>{{username}}</h3>
+	<img src="{{img}}" alt="">
 	<div class="fotos">
 		{{#each fotos}}
 			<div class="foto">
 				<img src="{{img}}" alt="">
-				<p>name : {{owner}}</p>
 				<a href="/user/detail/{{_id}}">Detail</a>
 			</div>
 		{{/each}}

@@ -55,8 +55,8 @@ const index = require('./routes/index');
 app.use('/', index);
 const auth = require("./routes/auth");
 app.use("/", auth);
-const userDetail = require("./routes/userDetail");
-app.use("/", userDetail);
+const detail = require("./routes/detail");
+app.use("/", detail);
 const fotoPost = require("./routes/fotoPost");
 app.use("/", fotoPost);
 

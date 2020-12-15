@@ -4,6 +4,10 @@ const fotoSchema = new Schema({
 	img : String,
 	comment : String,
 	owner : String,
+	tops : String,
+	bottoms :String,
+	shoses : String,
+	acce : String,
 	ownerId : {
 		type: Schema.Types,
 		ref: "User"

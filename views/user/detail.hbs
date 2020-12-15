@@ -1,11 +1,11 @@
-<div class="main">
-	<h1>{{username}}</h1>
-	<div class="fotos">
-		{{#each fotos}}
+<div class="detailFoto">
 		<div class="foto">
 			<img src="{{img}}" alt="">
+			<p>{{tops}}</p>
+			<p>{{bottoms}}</p>
+			<p>{{shoses}}</p>
+			<p>{{acce}}</p>
 			<p>{{comment}}</p>
 		</div>
-		{{/each}}
-	</div>
+		<a href="/user/aboutUser/{{ownerId}}">About {{owner}}</a>
 </div>

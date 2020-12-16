@@ -1,21 +1,29 @@
-<h2>Signup</h2>
-	{{#if message}}
-	<br>
-	<p class="message">{{message}}</p>
-	<br>
-	{{/if}}
-<form action="/auth/signup" method="POST" enctype="multipart/form-data">
-	<label for="username">Username</label>
-	<input type="text" name="username">
-	<br>
-	<label for="photo">Your profile photo</label>
-	<input type="file" name="photo">
-	<br>
-	<label for="email">Email</label>
-	<input type="email" name="email">
-	<br>
-	<label for="password">Password</label>
-	<input type="password" name="password">
-	<br>
-	<button type="submit">Signup!</button>
-</form>
+<div class="auth">
+	<h2>Signup</h2>
+		{{#if message}}
+		<br>
+		<p class="message">{{message}}</p>
+		<br>
+		{{/if}}
+	<form action="/auth/signup" method="POST" enctype="multipart/form-data">
+		<label for="username">Username</label>
+		<br>
+		<input type="text" name="username">
+		<br>
+		<label for="photo">Profile photo</label>
+		<br>
+		<label for="photo" class="signupPhotoLabel">choose photo
+			<input type="file" name="photo" class="signupPhoto">
+		</label>
+		<label for="email">Email</label>
+		<br>
+		<input type="email" name="email">
+		<br>
+		<label for="password">Password</label>
+		<br>
+		<input type="password" name="password">
+		<br>
+		<br>
+		<button type="submit">Signup!</button>
+	</form>
+</div>

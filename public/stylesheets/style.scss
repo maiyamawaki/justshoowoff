@@ -1,8 +1,10 @@
 *{
   margin : 0;
+  padding: 0;
   font-family: 'JetBrains Mono', monospace;
   overflow-x: hidden;
   box-sizing: border-box;
+  user-select: none;
 }
 
 a{
@@ -17,6 +19,16 @@ a:hover{
 
 .message{
   color:tomato;
+}
+
+button{
+  padding: 3px 10px;
+  border:none;
+  border-radius: 30px;
+  background-color: #333;
+  color: white;
+  display: block;
+  width: 100%;
 }
 
 /*links*/
@@ -63,9 +75,7 @@ a:hover{
 .foto{
   width: 40%;
   margin-bottom:20px;
-  border:1px solid #ddd;
-  padding: 10px;
-  height: 210px;
+  height: 215px;
 }
 
 .foto img{
@@ -91,6 +101,97 @@ a:hover{
 }
 
 /*detailFoto*/
+.detailFoto{
+  margin : 30px 10px;
+}
+
+.detail img{
+  width: 70%;
+  display: block;
+  margin : 20px auto;
+}
+
+.detailFoto ul{
+  list-style:none;
+  width: 70%;
+  margin : 10px auto;
+  font-size: 14px;
+}
+
+.detailFoto a{
+  display:block;
+  text-align:right;
+  width: 80%;
+  margin : 20px auto;
+  border-bottom:1px solid #333;
+}
+
+/*aboutUser*/
+.aboutUser{
+  width :80%;
+  margin:10px auto;
+  text-align: center;
+}
+
+.userInfo{
+  display: flex;
+  justify-content: space-between;
+  margin-top : 30px;
+}
+
+.userInfoText{
+  width: 60%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.userInfo img{
+  width: 40%;
+  border-radius: 50%;
+  border:1px solid #333;
+}
+
+/*auth*/
+.auth{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.auth h2{
+  text-align: center;
+  margin: 10px 0;
+}
+
+.auth input { 
+  width: 100%;
+  border:none;
+  background-color: #eee;
+  border-radius: 30px;
+  margin: 2px 0 8px 0;
+}
+
+.auth label{
+  margin:5px 0;
+}
+
+.signupPhotoLabel{
+  position: relative;
+  border:1px solid #eee;
+  background-color: #eee;
+  border-radius: 30px;
+  padding :0 15px;
+  display:block;
+}
+
+.signupPhoto{
+  position: absolute;
+  top:0;
+  left:0;
+  border:none;
+  border-radius:30px;
+  place-content: none;
+  opacity: 0;
+}
 
 /*delete confirm page*/
 .confirm{

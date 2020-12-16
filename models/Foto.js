@@ -2,7 +2,6 @@ const {Schema, model} = require("mongoose");
 
 const fotoSchema = new Schema({
 	img : String,
-	comment : String,
 	owner : String,
 	tops : String,
 	bottoms :String,

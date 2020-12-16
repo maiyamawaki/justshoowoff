@@ -1,26 +1,35 @@
-<div class="main">
-	<div class="acount-info">
-		<h2>Welcome {{username}}</h2>
-		<img src="{{photo}}" alt="">
+<div class="private">
+	<div class="userInfo">
+		<div class="userImg">
+			<img src="{{photo}}" alt="">
+		</div>
+		<div class="userInfoText">
+			<h2>{{username}}</h2>
+		</div>
 	</div>
-	<form action="/auth/private" method="POST" enctype="multipart/form-data">
-		<label for="img">Photo : </label>
-		<input type="file" name="img">
+	<form action="/auth/private" method="POST" enctype="multipart/form-data" class="privateForm">
+		<h3>Post ootd</h3>
 		<br>
-		<label for="tops">Tops or Outer : </label>
-		<input type="text" name="tops">
+		{{#if message}}
+		<p>{{messsage}}</p>
+		{{/if}}
 		<br>
-		<label for="bottoms">Pants : </label>
-		<input type="text" name="bottoms">
+		<label for="img" class="postPhotoLabel">Choose photo
+		<input required type="file" name="img" class="postPhoto">
+		</label>
 		<br>
-		<label for="shoses">Shoes : </label>
-		<input type="text" name="shoses">
+		<label for="tops">Tops or Outer</label>
+		<input required type="text" name="tops">
 		<br>
-		<label for="acce">Accessories : </label>
-		<input type="text" name="acce">
+		<label for="bottoms">Pants</label>
+		<input required type="text" name="bottoms">
 		<br>
-		<label for="comment">Comment : </label>
-		<input type="text" name="comment">
+		<label for="shoses">Shoes</label>
+		<input required type="text" name="shoses">
+		<br>
+		<label for="acce">Accessories</label>
+		<input required type="text" name="acce">
+		<br>
 		<br>
 		<button type="submit">Upload!</button>
 	</form>

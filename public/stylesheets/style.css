@@ -46,15 +46,10 @@ button {
 .link a:hover {
   font-size: 22px; }
 
-/*mainIndex*/
-.mainIndex {
-  width: 90%;
-  margin: 20px auto; }
-
-.mainIndex h1 {
-  margin-bottom: 15px; }
-
+/*fotos*/
 .fotos {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -62,11 +57,14 @@ button {
 
 .foto {
   width: 40%;
-  margin-bottom: 20px;
-  height: 215px; }
+  height: 100%;
+  margin: 0 5px 30px 5px; }
 
 .foto img {
-  width: 100%; }
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto; }
 
 .foto p {
   text-align: center;
@@ -82,6 +80,14 @@ button {
 
 .foto a:hover {
   font-size: 13px; }
+
+@media (min-width: 768px) {
+  .foto {
+    height: 100%; } }
+
+@media (min-width: 1100px) {
+  .foto {
+    width: 21%; } }
 
 /*detailFoto*/
 .detailFoto {
@@ -114,17 +120,21 @@ button {
 .userInfo {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px; }
+  margin: 30px auto;
+  width: 70%; }
 
 .userInfoText {
-  width: 60%;
+  width: 50%;
   text-align: left;
   margin-left: 20px; }
 
+.userImg {
+  width: 40%; }
+
 .userInfo img {
-  width: 40%;
-  border-radius: 50%;
-  border: 1px solid #333; }
+  width: 100%;
+  height: 100px;
+  border-radius: 50%; }
 
 /*auth*/
 .auth {
@@ -167,15 +177,57 @@ button {
   width: 80%;
   margin: 10px auto; }
 
+.deletefoto {
+  text-align: center; }
+
 .deletefoto img {
   width: 60%;
   display: block;
   margin: 0 auto; }
 
+.deletefoto label {
+  font-size: 11px; }
+
+.deletefoto input {
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #eee; }
+
+.deletefoto button {
+  background-color: tomato; }
+
 /*private*/
-.acount-info img {
-  width: 35%;
-  border: 1px solid #333;
-  border-radius: 50%; }
+.private {
+  margin: 10px 20px; }
+
+.privateForm {
+  width: 70%;
+  margin: 10px auto; }
+
+.privateForm h3 {
+  border-bottom: 1px solid #333;
+  text-align: right; }
+
+.privateForm input {
+  width: 100%;
+  border: none;
+  background-color: #eee;
+  border-radius: 30px;
+  margin: 2px 0 8px 0; }
+
+.postPhotoLabel {
+  position: relative;
+  background-color: #eee;
+  display: block;
+  width: 100%;
+  border-radius: 30px; }
+
+.postPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  place-content: none; }
 
 /*# sourceMappingURL=style.css.map */

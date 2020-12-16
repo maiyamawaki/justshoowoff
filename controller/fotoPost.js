@@ -3,15 +3,14 @@ const Foto = require("../models/Foto");
 
 /*private post process*/
 exports.postFotoProcess = async(req, res)=>{
-	const  {comment, tops, bottoms, shoses, acce} = req.body;
+	const  {tops, bottoms, shoses, acce} = req.body;
 	const {path} = req.file;
-	if(comment === ""){
-		return res.render("auth/private", {message : "You need to fill in the data."})
+	if(tops === "" || bottoms === "" || shoses === "" || acce === ""){
+		return res.render(`auth/private/${req.user.id}`, {message : "You need to fill in the data."})
 	}
 	const actualUser = req.user;
 	console.log(req.user.id);
 	const newFoto = await Foto.create({
-		comment,
 		tops,
 		bottoms,
 		shoses,

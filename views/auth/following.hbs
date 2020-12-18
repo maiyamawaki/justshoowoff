@@ -1,0 +1,11 @@
+<div class="following">
+	<h2>Following...</h2>
+	{{#each follow}}
+	<div class="followinguser">
+		<a href="/user/aboutUser/{{_id}}">
+			<img src="{{photo}}" alt="">
+			<span>{{username}}</span>
+		</a>
+	</div>
+	{{/each}}
+</div>

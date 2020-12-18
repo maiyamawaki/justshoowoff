@@ -52,5 +52,9 @@ exports.privateView = async(req,res)=>{
 	res.render("auth/private", user);
 }
 
-
+/*following users view*/
+exports.followingUsersView = async(req,res)=>{
+	let user = await User.findById(req.user.id);
+	res.render("auth/following", user);
+}
  

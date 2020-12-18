@@ -6,7 +6,8 @@ const { signupView,
 				loginView,
 				loginProcess,
 				logoutView,
-				privateView, } = require("../controller/auth");
+				privateView,
+				followingUsersView } = require("../controller/auth");
 
 /*signup*/
 router.get("/auth/signup", signupView); 
@@ -18,5 +19,7 @@ router.post("/auth/login", loginProcess);
 router.get("/logout",logoutView);
 /*private*/
 router.get("/auth/private", privateView);
+/*followingUserView*/
+router.get("/auth/following", followingUsersView);
 
 module.exports = router;

@@ -5,7 +5,7 @@
 		</div>
 		<div class="userInfoText">
 			<h2>{{username}}</h2>
-			<p>{{follow.length}}</p>
+			<a href="/auth/following">Following : <span>{{follow.length}}</span></a>
 		</div>
 	</div>
 	<form action="/auth/private" method="POST" enctype="multipart/form-data" class="privateForm">

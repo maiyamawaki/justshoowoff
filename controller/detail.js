@@ -21,13 +21,18 @@ exports.followFunction = async (req,res)=>{
 	let {userId} = req.params;
 	let user = await User.findById(userId);
 	let currentUser = await User.findById(req.user.id);
-	if(!currentUser.follow.includes(user)){
-		await User.findByIdAndUpdate(req.user.id, {$push:{follow :user}})
-	}else{
-		return res.render("/", {message : "You already are following this user"})
+	for(let i=0; i<currentUser.follow.length; i++){
+		if(currentUser.follow[i].username===user.username){
+			return res.render("index", {message : "You already are following this user"})
+		}
 	}
-	// let currentUser = await User.findByIdAndUpdate(req.user.id, {$push : {follow : user}});
-	console.log(currentUser);
+	// if(currentUser.follow.includes(user)){
+	// 	return res.render("/", {message : "You already are following this user"})
+	// }else{
+	// 	await User.findByIdAndUpdate(req.user.id, {$push:{follow :user}})
+	// }
+	await User.findByIdAndUpdate(req.user.id, {$push:{follow :user}})
+	console.log(user.username);
 	res.redirect("/");
 } 
 

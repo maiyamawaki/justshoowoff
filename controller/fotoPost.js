@@ -8,19 +8,17 @@ exports.postFotoProcess = async(req, res)=>{
 	if(tops === "" || bottoms === "" || shoses === "" || acce === ""){
 		return res.render(`auth/private/${req.user.id}`, {message : "You need to fill in the data."})
 	}
-	const actualUser = req.user;
-	console.log(req.user.id);
 	const newFoto = await Foto.create({
 		tops,
 		bottoms,
 		shoses,
 		acce,
 		img : path,
-		owner : actualUser.username,
+		owner : req.user.username,
 		ownerId : req.user.id,
 	})
-	const modifedUser = await User.findByIdAndUpdate(req.user.id, {$push : {fotos : newFoto}})
-	console.log(modifedUser)
+	await User.findByIdAndUpdate(req.user.id, {$push : {fotos : newFoto}})
+	console.log(newFoto);
 	res.redirect("/");
 }
 
@@ -32,7 +30,7 @@ exports.deleteFotoView = async (req,res)=>{
 }
 
 exports.deleteFotoProcess = async(req,res)=>{
-	const {fotoId} = req.body;
+	const {fotoId} = req.params;
 	console.log(fotoId);
 	const deleteFoto = await Foto.findByIdAndDelete(fotoId);
 	await User.findByIdAndUpdate(req.user.id, {$pull : {fotos : deleteFoto}})

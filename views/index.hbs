@@ -1,6 +1,16 @@
 <div class="mainIndex">
+	<div class="mainIndex-title">
+		<h1>just post ootd</h1>
+	</div>
 	<div class="fotos">
 		{{#each fotos}}
+				<div class="foto">
+					<img src="{{img}}" alt="">
+					<p>name : {{owner}}</p>
+					<a href="/user/detail/{{_id}}">Detail</a>
+			</div>
+		{{/each}}
+		{{#each fotosArr}}
 			<div class="foto">
 				<img src="{{img}}" alt="">
 				<p>name : {{owner}}</p>

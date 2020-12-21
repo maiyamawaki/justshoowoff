@@ -17,8 +17,8 @@
     <div class="link">
       {{#if user}}
       <a href="/">Home</a>
-      <a href="/auth/private">MyPage</a>
       <a href="/logout">Logout</a>
+      <a href="/auth/private">Mypage<img src={{user.photo}}></a>
       {{else}}
       <a href="/">Home</a>
       <a href="/auth/signup">Signup</a>
@@ -29,6 +29,7 @@
 
   {{{body}}}
 
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="/javascripts/script.js"></script>
 </body>
 </html>

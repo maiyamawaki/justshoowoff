@@ -2,11 +2,18 @@
 		<div class="detail">
 			<img src="{{img}}" alt="">
 		</div>
+		{{#if user}}
+			<form action="/user/detail/{{_id}}" method="POST">
+			<button type="submit">Favorite</button>
+			</form>
+		{{/if}}
 			<ul>
 				<li>Tops, Outer: {{tops}}</li>
 				<li>Pants : {{bottoms}}</li>
 				<li>Shoes : {{shoses}}</li>
 				<li>Accessories : {{acce}}</li>
 			</ul>
+		{{#if user}}
 		<a href="/user/aboutUser/{{ownerId}}">About {{owner}}</a>
+		{{/if}}
 </div>

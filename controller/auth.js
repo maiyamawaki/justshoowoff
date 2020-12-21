@@ -2,6 +2,7 @@ const User = require("../models/User");
 const Foto = require("../models/Foto");
 const bcrypt = require("bcrypt");
 const passport = require("../config/passport");
+const { remove } = require("../models/User");
 
 /*singup*/ 
 exports.signupView = (req,res)=>{
@@ -57,4 +58,9 @@ exports.followingUsersView = async(req,res)=>{
 	let user = await User.findById(req.user.id);
 	res.render("auth/following", user);
 }
- 
+
+/*favoritesPostsView*/
+exports.favoritesPostView = async(req, res)=>{
+	let user = await User.findById(req.user.id);
+	res.render("auth/favorites", user);
+}

@@ -7,7 +7,9 @@ const { signupView,
 				loginProcess,
 				logoutView,
 				privateView,
-				followingUsersView } = require("../controller/auth");
+				followingUsersView,
+				favoritesPostView,
+				} = require("../controller/auth");
 
 /*signup*/
 router.get("/auth/signup", signupView); 
@@ -22,4 +24,6 @@ router.get("/auth/private", privateView);
 /*followingUserView*/
 router.get("/auth/following", followingUsersView);
 
+/*favoritesPostView*/
+router.get("/auth/favorites", favoritesPostView);
 module.exports = router;

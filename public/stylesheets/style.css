@@ -6,6 +6,9 @@
   box-sizing: border-box;
   user-select: none; }
 
+body {
+  background-color: #ebeb03; }
+
 a {
   text-decoration: none;
   color: #333;
@@ -24,27 +27,44 @@ button {
   background-color: #333;
   color: white;
   display: block;
-  width: 100%; }
+  width: 60%;
+  margin: 0 auto; }
 
 /*links*/
 .links {
-  background-color: #333;
-  color: white;
+  color: #333;
   padding: 15px 10px;
   display: flex;
   justify-content: space-between; }
 
 .title a {
-  color: white;
+  color: #333;
   font-size: 28px; }
 
 .link a {
-  color: white;
+  color: #333;
   transition: all 1.1s;
   line-height: 40px; }
 
 .link a:hover {
   font-size: 22px; }
+
+.link img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; }
+
+/*mainIndex*/
+.mainIndex-title {
+  text-align: center;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  height: 400px; }
+
+.mainIndex-title h1 {
+  font-size: 62px;
+  margin-top: 80px; }
 
 /*fotos*/
 .fotos {
@@ -64,7 +84,8 @@ button {
   width: 100%;
   height: 100%;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-radius: 20px; }
 
 .foto p {
   text-align: center;
@@ -128,13 +149,16 @@ button {
   text-align: left;
   margin-left: 20px; }
 
+.userInfoText button {
+  width: 100%; }
+
 .userImg {
-  width: 40%; }
+  width: 50%; }
 
 .userInfo img {
-  width: 100%;
-  height: 100px;
-  border-radius: 50%; }
+  width: 50%;
+  height: 80%;
+  border-radius: 20px; }
 
 /*auth*/
 .auth {
@@ -198,10 +222,6 @@ button {
   background-color: tomato; }
 
 /*private*/
-.userImg img {
-  width: 100%;
-  height: 100%; }
-
 .userInfoText a {
   font-size: 12px; }
 

@@ -1,0 +1,10 @@
+<h2>favorites</h2>
+<div class="fotos">
+	{{#each favorites}}
+		<div class="foto">
+					<img src="{{img}}" alt="">
+					<p>name : {{owner}}</p>
+					<a href="/user/detail/{{_id}}">Detail</a>
+		</div>
+	{{/each}}
+</div>

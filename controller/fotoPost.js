@@ -18,7 +18,6 @@ exports.postFotoProcess = async(req, res)=>{
 		ownerId : req.user.id,
 	})
 	await User.findByIdAndUpdate(req.user.id, {$push : {fotos : newFoto}})
-	console.log(newFoto);
 	res.redirect("/");
 }
 
@@ -31,7 +30,6 @@ exports.deleteFotoView = async (req,res)=>{
 
 exports.deleteFotoProcess = async(req,res)=>{
 	const {fotoId} = req.params;
-	console.log(fotoId);
 	const deleteFoto = await Foto.findByIdAndDelete(fotoId);
 	await User.findByIdAndUpdate(req.user.id, {$pull : {fotos : deleteFoto}})
 	res.redirect("/auth/private");

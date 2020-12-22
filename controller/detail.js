@@ -6,7 +6,6 @@ const Foto = require("../models/Foto");
 exports.postDetailView = async(req,res)=>{
 	const {photoId} = req.params;
 	const foto = await Foto.findById(photoId);
-	console.log(foto);
 	res.render("user/detail", foto);
 }
 
@@ -32,11 +31,9 @@ exports.followFunction = async (req,res)=>{
 	let currentUser = await User.findById(req.user.id);
 	for(let i=0; i<currentUser.follow.length; i++){
 		if(currentUser.follow[i].username===user.username){
-			return res.render("auth/following");
+			return res.render("index", {message : "Already you are following this user."});
 		}
 	}
 	await User.findByIdAndUpdate(req.user.id, {$push:{follow :user}})
-	console.log(user.username);
-	res.redirect("/");
+	res.redirect("/auth/private");
 } 
-

@@ -21,7 +21,6 @@ passport.use(
 					if(!compareSync(password, user.password)){
 						return done(null, false, {message : "The password was wrong."});
 					}
-					console.log(user);
 					done(null, user)
 				}catch(error){
 					done(error);

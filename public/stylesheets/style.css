@@ -18,7 +18,8 @@ a:hover {
   font-size: 22px; }
 
 .message {
-  color: tomato; }
+  color: tomato;
+  text-align: center; }
 
 button {
   padding: 3px 10px;

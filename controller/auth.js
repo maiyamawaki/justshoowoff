@@ -27,7 +27,6 @@ exports.signupProcess = async(req,res)=>{
 		photo : path,
 		password : hashPass,
 	})
-	console.log(newUser);
 	res.redirect("/auth/login");
 }
 

@@ -14,7 +14,7 @@ exports.addFavoritePost = async(req, res)=>{
 	let {photoId} = req.params;
 	let post = await Foto.findById(photoId);
 	await User.findByIdAndUpdate(req.user.id, {$push : {favorites : post}});
-	res.redirect("/")
+	res.redirect("/auth/private")
 } 
 
 /*userDetail*/

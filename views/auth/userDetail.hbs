@@ -1,0 +1,20 @@
+<div class="aboutUser">
+	<div class="userInfo">
+		<div class="userImg">
+			<img src="{{photo}}" alt="">
+		</div>
+		<div class="userInfoText">
+			<h3>{{username}}</h3>
+			<br>
+				<form action="/auth/userDetail/{{_id}}" method="POST">
+				<button type="submit">Unfollow</button>
+				</form>
+		</div>
+	</div>
+	<div class="fotos">
+		{{#each fotos}}
+		<div class="foto">
+			<img src="{{img}}" alt="">
+		</div>
+		{{/each}}
+	</div>

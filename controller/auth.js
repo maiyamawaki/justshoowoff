@@ -58,8 +58,39 @@ exports.followingUsersView = async(req,res)=>{
 	res.render("auth/following", user);
 }
 
+/*following user detail*/
+exports.followingUserDetailView = async(req, res)=>{
+	let {userId} = req.params;
+	let user = await User.findById(userId);
+	res.render("auth/userDetail", user); 
+} 
+
+/*unfollowUser*/
+exports.unfollowUser = async(req, res)=>{
+	let {userId} = req.params;
+	let user = await User.findById(userId) 
+	await User.findByIdAndUpdate(req.user.id, {$pull: {follow : user}})
+	res.redirect("/auth/following")
+} 
+
 /*favoritesPostsView*/
 exports.favoritesPostView = async(req, res)=>{
 	let user = await User.findById(req.user.id);
 	res.render("auth/favorites", user);
 }
+
+/*favoriteDetail*/
+exports.favoriteDetailView = async(req, res)=>{
+	let {favoriteId} = req.params;
+	console.log(favoriteId);
+	let favorite = await Foto.findById(favoriteId);
+	res.render("auth/fotoDetail", favorite);
+} 
+
+/*removeFavoriteFoto*/
+exports.removeFavoriteFoto = async(req, res)=>{
+	let {favoriteId} = req.params;
+	let foto = await Foto.findById(favoriteId);
+	await User.findByIdAndUpdate(req.user.id, {$pull:{favorites:foto}})
+	res.redirect("/auth/favorites");
+} 

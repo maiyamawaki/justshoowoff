@@ -9,6 +9,10 @@ const { signupView,
 				privateView,
 				followingUsersView,
 				favoritesPostView,
+				favoriteDetailView,
+				removeFavoriteFoto,
+				followingUserDetailView,
+				unfollowUser
 				} = require("../controller/auth");
 
 /*signup*/
@@ -23,7 +27,15 @@ router.get("/logout",logoutView);
 router.get("/auth/private", privateView);
 /*followingUserView*/
 router.get("/auth/following", followingUsersView);
-
+/*followingUserDetailView*/
+router.get("/auth/userDetail/:userId", followingUserDetailView)
+/*unfollowingUser*/
+router.post("/auth/userDetail/:userId", unfollowUser) 
 /*favoritesPostView*/
 router.get("/auth/favorites", favoritesPostView);
+/*Favorite detail*/ 
+router.get("/auth/fotoDetail/:favoriteId", favoriteDetailView)
+/*removing favorite post*/
+router.post("/auth/fotoDetail/:favoriteId", removeFavoriteFoto); 
+
 module.exports = router;

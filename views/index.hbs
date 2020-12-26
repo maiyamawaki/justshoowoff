@@ -1,24 +1,36 @@
 <div class="mainIndex">
-	<div class="mainIndex-title">
-		<h1>just post ootd</h1>
-	</div>
 	{{#if message}}
 	<p class="message">{{message}}</p>
 	{{/if}}
-	<div class="fotos">
-		{{#each fotos}}
+	{{#if user}}
+		<div class="mainIndex-title">
+			<h1>just post ootd</h1>
+		</div>
+		<div class="fotos">
+			{{#each fotos}}
+					<div class="foto">
+						<img src="{{img}}" alt="">
+						<p>name : {{owner}}</p>
+						<a href="/user/detail/{{_id}}">Detail</a>
+				</div>
+			{{/each}}
+			{{#each fotosArr}}
 				<div class="foto">
 					<img src="{{img}}" alt="">
 					<p>name : {{owner}}</p>
 					<a href="/user/detail/{{_id}}">Detail</a>
-			</div>
-		{{/each}}
-		{{#each fotosArr}}
-			<div class="foto">
-				<img src="{{img}}" alt="">
-				<p>name : {{owner}}</p>
-				<a href="/user/detail/{{_id}}">Detail</a>
-			</div>
-		{{/each}}
+				</div>
+			{{/each}}
+		</div>
+	{{else}}
+	<div class="withoutUserIndex">
+		<div class="mainIndexwithoutUser" >
+			<img class="mainImg" src="https://res.cloudinary.com/dxpxe8gus/image/upload/v1608105055/yamai/yamai-snap8.jpg.jpg" alt="">
+		</div>
+		<div class="aboutYamai">
+			<h1>Just post your ootd.</h1>
+		</div>
 	</div>
+	{{/if}}
 </div>
+

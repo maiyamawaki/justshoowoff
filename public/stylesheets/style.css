@@ -5,315 +5,43 @@
   box-sizing: border-box;
   user-select: none; }
 
-body {
-  background-color: #ebeb03; }
-
 a {
   text-decoration: none;
-  color: #333;
-  transition: all 1.1s; }
+  color: #333; }
 
-a:hover {
-  font-size: 22px; }
-
-.message {
-  color: tomato;
-  text-align: center; }
-
-button {
-  padding: 3px 10px;
-  border: none;
-  border-radius: 30px;
-  background-color: #333;
-  color: white;
-  display: block;
-  width: 60%;
-  margin: 0 auto; }
-
-/*links*/
+/*layout*/
 .links {
-  color: #333;
-  padding: 15px 10px;
   display: flex;
   justify-content: space-between; }
 
 .title a {
-  color: #333;
-  font-size: 28px; }
+  font-size: 42px; }
 
-.link a {
-  color: #333;
-  transition: all 1.1s;
-  line-height: 40px; }
+.link ul {
+  list-style: none; }
 
-.link a:hover {
-  font-size: 22px; }
-
-.link img {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%; }
-
-/*mainIndex*/
-.mainIndex-title {
-  text-align: center;
-  width: 50%;
-  text-align: center;
-  margin: 0 auto;
-  height: 400px; }
-
-.mainIndex-title h1 {
-  font-size: 62px;
-  margin-top: 80px; }
-
-.withoutUserIndex {
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch; }
-
-.mainIndexwithoutUser {
+.link li {
   display: inline-block;
-  width: 100%;
-  text-align: center; }
+  margin-top: 20px; }
 
-.mainIndexwithoutUser img {
-  display: block;
-  margin: 10px auto;
-  width: 40%; }
-
-.aboutYamai {
-  margin: 0;
-  display: inline-block;
-  width: 100%; }
-
-.aboutYamai h1 {
-  font-size: 62px;
-  position: absolute;
-  top: 100px;
-  right: 50px; }
-
-/*fotos*/
-.fotos {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 50px; }
-
-.foto {
-  width: 40%;
-  height: 100%;
-  margin: 0 5px 30px 5px; }
-
-.foto img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 20px; }
-
-.foto p {
-  text-align: center;
-  font-size: 11px;
-  margin-bottom: 5px; }
-
-.foto a {
-  font-size: 10px;
-  display: block;
-  text-align: right;
-  border-bottom: 1px solid #333;
-  transition: all 1.0s; }
-
-.foto a:hover {
-  font-size: 13px; }
-
-@media (min-width: 768px) {
-  .foto {
-    height: 100%; } }
-
-@media (min-width: 1100px) {
-  .foto {
-    width: 21%; } }
-
-/*detailFoto*/
-.detailFoto {
-  margin: 30px 10px; }
-
-.detail img {
-  width: 70%;
-  display: block;
-  margin: 20px auto; }
-
-.detailFoto ul {
-  list-style: none;
-  width: 70%;
-  margin: 10px auto;
-  font-size: 14px; }
-
-.detailFoto a {
-  display: block;
-  text-align: right;
-  width: 80%;
-  margin: 20px auto;
-  border-bottom: 1px solid #333; }
-
-/*aboutUser*/
-.aboutUser {
-  width: 80%;
-  margin: 10px auto;
-  text-align: center; }
-
-.userInfo {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px auto;
-  width: 70%; }
-
-.userInfoText {
-  width: 50%;
-  text-align: left;
-  margin-left: 20px; }
-
-.userInfoText button {
-  width: 100%; }
-
-.userImg {
-  width: 50%; }
-
-.userInfo img {
-  width: 50%;
-  height: 80%;
-  border-radius: 20px; }
-
-/*auth*/
-.auth {
-  width: 60%;
-  margin: 0 auto; }
-
-.auth h2 {
-  text-align: center;
-  margin: 10px 0; }
-
-.auth input {
-  width: 100%;
-  border: none;
-  background-color: #eee;
-  border-radius: 30px;
-  margin: 2px 0 8px 0; }
-
-.auth label {
-  margin: 5px 0; }
-
-.signupPhotoLabel {
-  position: relative;
-  border: 1px solid #eee;
-  background-color: #eee;
-  border-radius: 30px;
-  padding: 0 15px;
-  display: block; }
-
-.signupPhoto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: none;
-  border-radius: 30px;
-  place-content: none;
-  opacity: 0; }
-
-/*delete confirm page*/
-.confirm {
-  width: 80%;
-  margin: 10px auto; }
-
-.deletefoto {
-  text-align: center; }
-
-.deletefoto img {
-  width: 60%;
-  display: block;
-  margin: 0 auto; }
-
-.deletefoto label {
-  font-size: 11px; }
-
-.deletefoto input {
-  border: none;
-  width: 100%;
-  border-radius: 30px;
-  background-color: #eee; }
-
-.deletefoto button {
-  background-color: tomato; }
-
-/*private*/
-.userInfoText a {
-  font-size: 12px; }
-
-.userInfo a:after {
+.links li a:after {
   content: "";
   width: 0;
   transition: all 0.3s ease;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #333;
   display: block; }
 
-.userInfoText a:hover:after {
-  width: 60%;
-  border-bottom: 1px solid #333; }
-
-.private {
-  margin: 10px 20px; }
-
-.privateForm {
-  width: 70%;
-  margin: 10px auto; }
-
-.privateForm h3 {
-  border-bottom: 1px solid #333;
-  text-align: right; }
-
-.privateForm input {
+.links li a:hover:after {
   width: 100%;
-  border: none;
-  background-color: #eee;
-  border-radius: 30px;
-  margin: 2px 0 8px 0; }
+  border-bottom: 2px solid #333; }
 
-.postPhotoLabel {
-  position: relative;
-  background-color: #eee;
-  display: block;
-  width: 100%;
-  border-radius: 30px; }
+/*index*/
+.mainIndex {
+  width: 100%; }
 
-.postPhoto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  place-content: none; }
-
-/*followingUsersView*/
-.following {
-  width: 80%;
-  margin: 10px auto;
-  text-align: center; }
-
-.followinguser {
-  margin: 5px auto;
-  width: 60%;
-  text-align: left; }
-
-.followinguser img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; }
-
-/*favorites*/
-.favorites {
-  width: 80%;
-  margin: 10px auto;
-  text-align: center; }
+.indexFrase h1 {
+  text-align: center;
+  font-size: 100px;
+  margin: 40px 0; }
 
 /*# sourceMappingURL=style.css.map */

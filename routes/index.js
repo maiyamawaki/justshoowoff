@@ -7,7 +7,7 @@ const User = require('../models/User');
 router.get('/', async (req, res, next) => {
 	const fotos = await Foto.find();
 	if(!req.user){
-		res.render("index", {fotos})
+		res.render("index")
 	}else if(req.user){
 		let fotosArr = [];
 		for(let i=0; i<fotos.length; i++){

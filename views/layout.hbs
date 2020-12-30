@@ -12,18 +12,20 @@
 <body>
   <div class="links">
     <div class="title">
-      <a href="/">Ootd</a>
+      <a href="/">ootd</a>
     </div>
     <div class="link">
-      {{#if user}}
-      <a href="/">Home</a>
-      <a href="/logout">Logout</a>
-      <a href="/auth/private">Mypage<img src={{user.photo}}></a>
-      {{else}}
-      <a href="/">Home</a>
-      <a href="/auth/signup">Signup</a>
-      <a href="/auth/login">Login</a>
-      {{/if}}
+      <ul>
+        {{#if user}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/auth/private">Mypage<img src={{user.photo}}></a></li>
+        {{else}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/auth/signup">Signup</a></li>
+        <li><a href="/auth/login">Login</a></li>
+        {{/if}}
+      </ul>
     </div>
   </div>
 

@@ -1,19 +1,9 @@
 <div class="mainIndex">
-	{{#if message}}
-	<p class="message">{{message}}</p>
-	{{/if}}
 	{{#if user}}
-		<div class="mainIndex-title">
+		<div>
 			<h1>just post ootd</h1>
 		</div>
-		<div class="fotos">
-			{{#each fotos}}
-					<div class="foto">
-						<img src="{{img}}" alt="">
-						<p>name : {{owner}}</p>
-						<a href="/user/detail/{{_id}}">Detail</a>
-				</div>
-			{{/each}}
+		<div class="fotos"
 			{{#each fotosArr}}
 				<div class="foto">
 					<img src="{{img}}" alt="">
@@ -23,12 +13,9 @@
 			{{/each}}
 		</div>
 	{{else}}
-	<div class="withoutUserIndex">
-		<div class="mainIndexwithoutUser" >
-			<img class="mainImg" src="https://res.cloudinary.com/dxpxe8gus/image/upload/v1608105055/yamai/yamai-snap8.jpg.jpg" alt="">
-		</div>
-		<div class="aboutYamai">
-			<h1>Just post your ootd.</h1>
+	<div class="">
+		<div class="indexFrase">
+			<h1>just post your ootd</h1>
 		</div>
 	</div>
 	{{/if}}

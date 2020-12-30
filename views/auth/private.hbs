@@ -6,35 +6,47 @@
 		<div class="userInfoText">
 			<h2>{{username}}</h2>
 			<a href="/auth/following">Following : <span>{{follow.length}}</span></a>
+			<br>
 			<a href="/auth/favorites">Favorites : <span>{{favorites.length}}</span></a>
 		</div>
 	</div>
+
 	<form action="/auth/private" method="POST" enctype="multipart/form-data" class="privateForm">
 		<h3>Post ootd</h3>
-		<br>
 		{{#if message}}
 		<p>{{messsage}}</p>
 		{{/if}}
-		<br>
-		<label for="img" class="postPhotoLabel">Choose photo
-		<input required type="file" name="img" class="postPhoto">
-		</label>
-		<br>
-		<label for="tops">Tops or Outer</label>
-		<input required type="text" name="tops">
-		<br>
-		<label for="bottoms">Pants</label>
-		<input required type="text" name="bottoms">
-		<br>
-		<label for="shoses">Shoes</label>
-		<input required type="text" name="shoses">
-		<br>
-		<label for="acce">Accessories</label>
-		<input required type="text" name="acce">
-		<br>
-		<br>
+
+		<div class="labels">
+			<label for="img">Photo</label>
+			<label for="img" class="postPhotoLabel">Choose photo
+			<input required type="file" name="img" class="postPhoto">
+			</label>
+		</div>
+		
+		<div class="labels">
+			<label for="tops">Tops or Outer</label>
+			<input required type="text" name="tops">
+		</div>
+
+		<div class="labels">
+			<label for="bottoms">Pants</label>
+			<input required type="text" name="bottoms">
+		</div>
+
+		<div class="labels">
+			<label for="shoses">Shoes</label>
+			<input required type="text" name="shoses">
+		</div>
+
+		<div class="labels">
+			<label for="acce">Accessories</label>
+			<input required type="text" name="acce">
+		</div>
+
 		<button type="submit">Upload!</button>
 	</form>
+
 	<div class="fotos">
 		{{#each fotos}}
 			<div class="foto">

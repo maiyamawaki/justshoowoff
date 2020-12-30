@@ -1,9 +1,14 @@
 *{
   margin : 0;
   padding: 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Squada One', cursive;
   box-sizing: border-box;
   user-select: none;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #ADFF2F;
 }
 
 a{
@@ -15,6 +20,8 @@ a{
 .links{
   display: flex;
   justify-content: space-between;
+  width: 95%;
+  margin:5px auto;
 }
 
 .title a{
@@ -27,10 +34,12 @@ a{
 
 .link li{
   display: inline-block;
+  padding: 0 5px;
   margin-top:20px;
+  margin-left:5px;
 }
 
-.links li a:after{
+.link li a:after{
   content: "";
   width: 0;
   transition: all 0.3s ease;
@@ -38,18 +47,246 @@ a{
   display: block;
 }
 
-.links li a:hover:after{
+.link li a:hover:after{
   width: 100%;
   border-bottom:2px solid #333;
+}
+
+@media(min-width:768px){
+  .title a{
+    font-size: 52px;
+  }
+
+  .link li a{
+    font-size: 22px;
+  }
 }
 
 /*index*/
 .mainIndex{
   width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.indexFrase{
+  height: 650px;
+  margin : auto;
+  width: 100%;
+  overflow: hidden;
 }
 
 .indexFrase h1{
+  display: inline-block;
+  padding-left:100%;
+  white-space: nowrap;
+  line-height: 1em;
+  font-size:100px;
+  line-height: 650px;
+  animation: scrollAnime 8.5s linear infinite;
+}
+
+.mainIndexFrase{
+  height: 30px;
+  margin:auto;
+  width: 100%;
+  overflow: hidden;
+  margin:30px 0;
+}
+
+.mainIndexFrase h1{
+  line-height: 30px;
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  line-height: 1em;
+  font-size:24px;
+  animation: scrollAnime 8.5s linear infinite;
+}
+
+@keyframes scrollAnime{
+  0% {transform: translateX(0)}
+100% {transform: translateX(-100%)}
+}
+
+@media(min-width:768px){
+  .indexFrase{
+    height:670px;
+  }
+  .indexFrase h1{
+    font-size: 140px;
+    line-height: 670px;
+  }
+  .mainIndexFrase{
+    height: 50px;
+  }
+  .mainIndexFrase h1{
+    font-size:32px;
+  }
+}
+
+/*signup*/
+.auth{
+  width: 80%;
+  margin:30px auto;
+}
+
+.auth h2{
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 100px;
-  margin:40px 0;
+  border-bottom:1px solid #333;
+  padding-bottom:5px;
+}
+
+.labels{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:10px;
+}
+
+input{
+  border:none;
+  padding:3px 7px;
+  border-radius: 2px;
+}
+
+.signupPhotoLabel,
+.postPhotoLabel{
+  position: relative;
+  display: block;
+  width: 139px;
+  background-color: white;
+  padding:3px 7px;
+  border-radius: 2px;
+}
+
+.signupPhoto{
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+}
+
+button{
+  padding:5px 10px;
+  border:none;
+  background-color: #333;
+  color: white;
+  display:block;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 2px;
+  font-size: 20px;
+  transition: all 0.7s ease;
+}
+
+button:hover{
+  background-color: #ADFF2F;
+  font-size: 22px;
+  color: #333;
+  border-bottom: 2px solid #333;
+}
+
+@media(min-width:768px){
+  .auth h2{
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .labels{
+    width: 70%;
+    margin: 0 auto 15px auto;
+  }
+
+  .labels label{
+    font-size: 18px;
+  }
+
+  .auth input,
+  .signupPhotoLabel{
+    width: 300px;
+    padding: 10px;
+  }
+
+  button{
+    padding:10px;
+    width: 270px;
+    font-size: 22px;
+    margin-top:50px;
+  }
+  
+  button:hover{
+    font-size: 26px;
+  }
+}
+
+/*private*/
+.private{
+  width: 95%;
+  margin:30px auto;
+}
+
+.userInfo{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 40px auto;
+}
+
+.userImg{
+  width: 20%;
+}
+
+.userImg img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.userInfoText{
+  width: 70%;
+}
+
+.privateForm{
+  width: 80%;
+  margin: 20px auto
+}
+
+.privateForm h3{
+  border-bottom: 1px solid #333;
+  margin-bottom: 15px;
+}
+
+.postPhotoLabel{
+  position: relative;
+}
+
+.postPhoto{
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0;
+}
+
+.fotos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.foto{
+  width: 80%;
+}
+
+.foto img{
+  width: 100%;
+}
+
+@media (min-width:768px){
+  .userInfo,
+  .privateForm{
+    width: 70%;
+  }
+  .foto{
+    width: 25%;
+  }
 }

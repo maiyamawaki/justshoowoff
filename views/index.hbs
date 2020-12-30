@@ -1,9 +1,10 @@
 <div class="mainIndex">
 	{{#if user}}
-		<div>
-			<h1>just post ootd</h1>
+		<div class="mainIndexFrase">
+			<h1>Just show off your ootd.
+			</h1>
 		</div>
-		<div class="fotos"
+		<div class="fotos">
 			{{#each fotosArr}}
 				<div class="foto">
 					<img src="{{img}}" alt="">
@@ -13,11 +14,9 @@
 			{{/each}}
 		</div>
 	{{else}}
-	<div class="">
 		<div class="indexFrase">
-			<h1>just post your ootd</h1>
+			<h1>Just show off your ootd.</h1>
 		</div>
-	</div>
 	{{/if}}
 </div>
 

@@ -1,18 +1,18 @@
 <div class="auth">
 	<h2>Login</h2>
 		{{#if message}}
-		<br>
 		<p class="message">{{message}}</p>
 		<br>
 		{{/if}}
 	<form action="/auth/login" method="POST">
-		<label for="email">Email</label>
-		<input type="email" name="email">
-		<br>
-		<label for="password">Password</label>
-		<input type="password" name="password">
-		<br>
-		<br>
+		<div class="labels">
+			<label for="email">Email</label>
+			<input type="email" name="email">
+		</div>
+		<div class="labels">
+			<label for="password">Password</label>
+			<input type="password" name="password">
+		</div>
 		<button type="submit">Login!</button>
 	</form>
 </div>

@@ -6,24 +6,28 @@
 		<br>
 		{{/if}}
 	<form action="/auth/signup" method="POST" enctype="multipart/form-data">
-		<label for="username">Username</label>
-		<br>
-		<input required type="text" name="username">
-		<br>
-		<label for="photo">Profile photo</label>
-		<br>
-		<label for="photo" class="signupPhotoLabel">Choose photo
+		<div class="labels">
+			<label for="username">Username</label>
+			<input required type="text" name="username">
+		</div>
+
+		<div class="labels">
+			<label for="photo">Profile</label>
+			<label for="photo" class="signupPhotoLabel">choose your foto
 			<input required type="file" name="photo" class="signupPhoto">
-		</label>
-		<label for="email">Email</label>
-		<br>
-		<input required type="email" name="email">
-		<br>
-		<label for="password">Password</label>
-		<br>
-		<input required type="password" name="password">
-		<br>
-		<br>
+			</label>
+		</div>
+
+		<div class="labels">
+			<label for="email">Email</label>
+			<input required type="email" name="email">
+		</div>
+
+		<div class="labels">
+			<label for="password">Password</label>
+			<input required type="password" name="password">
+		</div>
+
 		<button type="submit">Signup!</button>
 	</form>
 </div>

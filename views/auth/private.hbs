@@ -5,9 +5,15 @@
 		</div>
 		<div class="userInfoText">
 			<h2>{{username}}</h2>
-			<a href="/auth/following">Following : <span>{{follow.length}}</span></a>
 			<br>
-			<a href="/auth/favorites">Favorites : <span>{{favorites.length}}</span></a>
+			<ul>
+				<li>
+					<a href="/auth/following">Following : <span>{{follow.length}}</span></a>
+				</li>
+				<li>
+					<a href="/auth/favorites">Favorites : <span>{{favorites.length}}</span></a>
+				</li>
+			</ul>
 		</div>
 	</div>
 
@@ -49,7 +55,7 @@
 
 	<div class="fotos">
 		{{#each fotos}}
-			<div class="foto">
+			<div class="foto privateFoto">
 				<img src="{{img}}" alt="">
 				<a href="/auth/delete/{{_id}}">Delete</a>
 			</div>

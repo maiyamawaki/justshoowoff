@@ -32,14 +32,24 @@ a {
   margin-top: 20px;
   margin-left: 5px; }
 
-.link li a:after {
+.link li a:after,
+.userInfoText li a:after,
+.foto li a:after,
+.detailFoto a:after,
+.foto a:after,
+.followinguser a:after {
   content: "";
   width: 0;
   transition: all 0.3s ease;
   border-bottom: 2px solid #333;
   display: block; }
 
-.link li a:hover:after {
+.link li a:hover:after,
+.userInfoText li a:hover:after,
+.foto li a:hover:after,
+.detailFoto a:hover:after,
+.foto a:hover:after,
+.followinguser a:hover:after {
   width: 100%;
   border-bottom: 2px solid #333; }
 
@@ -56,7 +66,7 @@ a {
   overflow-x: hidden; }
 
 .indexFrase {
-  height: 650px;
+  height: 400px;
   margin: auto;
   width: 100%;
   overflow: hidden; }
@@ -65,10 +75,29 @@ a {
   display: inline-block;
   padding-left: 100%;
   white-space: nowrap;
-  line-height: 1em;
+  line-height: 500px;
   font-size: 100px;
-  line-height: 650px;
   animation: scrollAnime 8.5s linear infinite; }
+
+.fotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.foto {
+  width: 20%;
+  margin: 0 10px 15px 10px; }
+
+.foto li {
+  display: block; }
+
+.foto img {
+  width: 100%; }
+
+.foto a,
+.foto p {
+  display: block;
+  text-align: right; }
 
 .mainIndexFrase {
   height: 30px;
@@ -141,6 +170,7 @@ input {
 
 button {
   padding: 5px 10px;
+  text-align: center;
   border: none;
   background-color: #333;
   color: white;
@@ -199,6 +229,10 @@ button:hover {
 .userInfoText {
   width: 70%; }
 
+.userInfoText li {
+  display: block;
+  width: 77px; }
+
 .privateForm {
   width: 80%;
   margin: 20px auto; }
@@ -216,22 +250,97 @@ button:hover {
   left: 0;
   opacity: 0; }
 
-.fotos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-
-.foto {
-  width: 80%; }
-
-.foto img {
-  width: 100%; }
-
 @media (min-width: 768px) {
   .userInfo,
   .privateForm {
     width: 70%; }
   .foto {
     width: 25%; } }
+
+/*detailFoto*/
+.detailFoto {
+  width: 90%;
+  margin: 20px auto; }
+
+.detail {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto; }
+
+.detail img {
+  width: 100%;
+  display: block;
+  margin: 50px 0; }
+
+.detailFoto ul {
+  width: 60%;
+  margin: 30px auto; }
+
+.detailFoto a {
+  width: 60%;
+  margin: 0 auto;
+  text-align: right;
+  display: block; }
+
+@media (min-width: 768px) {
+  .detailFoto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .detail {
+    width: 40%;
+    margin: 0; }
+  .detailContext {
+    width: 30%;
+    margin-left: 20px; }
+  .detailContext button {
+    width: 100%; }
+  .detailContext ul li,
+  .detailContext a {
+    font-size: 22px; }
+  .detailFoto ul {
+    width: 100%; }
+  .detailFoto a {
+    width: 100%; } }
+
+/*aboutUser*/
+.userInfoText button {
+  margin-right: 100%; }
+
+.userInfoText h3 {
+  font-size: 22px; }
+
+/*following*/
+.following {
+  width: 90%;
+  margin: 40px auto; }
+
+.following h2 {
+  text-align: center; }
+
+.followinguser img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+/*favorites*/
+.favorites {
+  width: 90%;
+  margin: 20px auto; }
+
+.favorites h2 {
+  text-align: center; }
+
+/*confirm*/
+.confirm {
+  width: 60%;
+  margin: 20px auto; }
+
+.deletefoto img {
+  width: 100%; }
+
+@media (min-width: 768px) {
+  .confirm {
+    width: 30%; } }
 
 /*# sourceMappingURL=style.css.map */

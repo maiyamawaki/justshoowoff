@@ -1,13 +1,16 @@
-<div class="fotoDetail">
-	<img src="{{img}}" alt="">
-	<form action="/auth/fotoDetail/{{_id}}" method="POST">
-	<button type = "submit">Remove from muy favorites..</button>
-	</form>
-	<div class="fotoDetailText">
-		<p>Posted by : {{owner}}</p>
-		<p>Tops, Outer : {{tops}}</p>
-		<p>Pants : {{bottoms}}</p>
-		<p>Shoes : {{shoses}}</p>
-		<p>Accessories : {{acce}}</p>
+<div class="fotoDetail detailFoto">
+	<div class="detail">
+		<img src="{{img}}" alt="">
+	</div>
+	<div class="detailContext">
+		<form action="/auth/fotoDetail/{{_id}}" method="POST">
+		<button type = "submit">Remove</button>
+		</form>
+		<ul>
+					<li>Tops, Outer: {{tops}}</li>
+					<li>Pants : {{bottoms}}</li>
+					<li>Shoes : {{shoses}}</li>
+					<li>Accessories : {{acce}}</li>
+				</ul>
 	</div>
 </div>

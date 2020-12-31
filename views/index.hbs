@@ -8,8 +8,10 @@
 			{{#each fotosArr}}
 				<div class="foto">
 					<img src="{{img}}" alt="">
-					<p>name : {{owner}}</p>
-					<a href="/user/detail/{{_id}}">Detail</a>
+					<ul>
+						<li><p>name : {{owner}}</p></li>
+						<li><a href="/user/detail/{{_id}}">Detail</a></li>
+					</ul>
 				</div>
 			{{/each}}
 		</div>
